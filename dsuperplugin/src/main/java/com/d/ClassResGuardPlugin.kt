@@ -25,7 +25,7 @@ import org.gradle.api.Project
  */
 class ClassResGuardPlugin : Plugin<Project> {
     override fun apply(project: Project) {
-        checkApplicationPlugin(project)
+//        checkApplicationPlugin(project)
         val configExtension = project.extensions.create("classResGuardYang", ConfigExtension::class.java)
         project.tasks.create("renameRes", RenameResGuardTask::class.java, configExtension)
         project.tasks.create("addJunkFile", AddJunkFileGuardTask::class.java, configExtension)
